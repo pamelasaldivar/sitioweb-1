@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaldiErick</title>
+    <link rel="stylesheet" href="aplicacion.css">
+
+     <!-- Agregar el ícono de huevo -->
+     <link rel="icon" href="logo.jpeg" type="image/x-icon">
+     <!-- Si usas .png o .svg, cambia la ruta y el type -->
+     <!-- <link rel="icon" href="huevo.png" type="image/png"> -->
+     
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Lista de contactos/chats) -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="avatar.png" alt="User Avatar">
+                <h2>Mi chat</h2>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar o iniciar un nuevo chat">
+            </div>
+            <div class="chats-list">
+                <div class="chat">
+                    <img src="avatar.png" alt="Chat Avatar">
+                    <div class="chat-info">
+                        <h3>Contacto 1</h3>
+                        <p>Último mensaje...</p>
+                    </div>
+                </div>
+                <div class="chat">
+                    <img src="avatar.png" alt="Chat Avatar">
+                    <div class="chat-info">
+                        <h3>Contacto 2</h3>
+                        <p>Último mensaje...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana de Chat -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <img src="avatar.png" alt="Chat Avatar">
+                <h3>Contacto 1</h3>
+            </div>
+            <div class="chat-Body">
+                <div class="message sent">
+                    <p>¡Hola! ¿Cómo estás?</p>
+                </div>
+                <div class="message received" id="chatBody">
+                    <p>Todo bien, gracias. ¿Y tú?</p>
+                </div>
+            </div>
+
+            <!-- Pie de chat con el nuevo menú -->
+            <div class="chat-footer" >
+                <!-- Botón de emojis -->
+                <button id="emojiButton">😊</button>
+
+                <!-- Botón de adjuntar archivos (abre menú desplegable) -->
+                <div class="attach-menu">
+                    <button id="attachButton">📎</button>
+                    <ul id="attachOptions">
+                        <li><button id="fotosVideos">Fotos y videos</button></li>
+                        <li><button id="camara">Cámara</button></li>
+                        <li><button id="documento">Documento</button></li>
+                        <li><button id="contacto">Contacto</button></li>
+                        <li><button id="encuesta">Encuesta</button></li>
+                        <li><button id="dibujo">Dibujo</button></li>
+                    </ul>
+                </div>
+
+                <!-- Input de texto -->
+                <input type="text" placeholder="Escribe un mensaje" id="messageInput">
+
+                <!-- Botón para enviar mensaje -->
+                <button id="sendButton">Enviar</button>
+
+                <!-- Botones para grabar audio -->
+                <button id="audioButton">🎤</button>
+                <button id="stopButton" disabled>⏹️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluye los archivos de JavaScript -->
+    <!--<script src="audio.js"></script> -->
+    <!--<script src="adjuntar.js"></script>  --> <!-- El nuevo archivo JavaScript -->
+    <!-- JavaScript para enviar mensajes -->
+    <script>
+        // Asegúrate de que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener los elementos
+            const sendButton = document.getElementById('sendButton');
+            const messageInput = document.getElementById('messageInput');
+            const chatBody = document.getElementById('chatBody');
+
+            // Función para enviar mensaje
+            sendButton.addEventListener('click', function() {
+                // Obtener el texto del input
+                const messageText = messageInput.value;
+
+                // Verifica si hay texto en el input
+                if (messageText.trim() !== "") {
+                    // Crear un nuevo div para el mensaje
+                    const newMessage = document.createElement('div');
+                    newMessage.classList.add('message', 'sent');
+                    newMessage.innerHTML = `<p>${messageText}</p>`;
+
+                    // Agregar el mensaje a la ventana de chat
+                    chatBody.appendChild(newMessage);
+
+                    // Limpiar el campo de entrada
+                    messageInput.value = '';
+
+                    // Desplazar hacia abajo la ventana de chat
+                    chatBody.scrollTop = chatBody.scrollHeight;
+
+                    // Debug: Verifica si el mensaje fue agregado
+                    console.log("Mensaje enviado: ", messageText);
+                } else {
+                    // Debug: No se ha ingresado ningún texto
+                    console.log("El campo de entrada está vacío.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

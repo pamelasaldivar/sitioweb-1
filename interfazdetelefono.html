@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Llamadas</title>
+    <link rel="stylesheet" href="interfadetelefono.css">
+</head>
+<body>
+    <div class="call-container">
+        <header>
+            <h2>Llamadas</h2>
+            <div class="actions">
+                <button>Ctrl + F</button>
+                <button>+</button>
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Busca una llamada o inicia una nueva.">
+        </div>
+
+        <div class="create-call-link">
+            <p>Crear enlace de llamada</p>
+            <p>Comparte un enlace de llamada de SaldiErick.</p>
+        </div>
+
+        <div class="recent-calls">
+            <h3>Recientes</h3>
+            <ul>
+                <li class="call-item missed">
+                    <img src="avatar1.jpg" alt="">
+                    <div class="call-info">
+                        <span></span>
+                        <span class="missed-call"></span>
+                    </div>
+                    <span class="call-time"></span>
+                </li>
+                <li class="call-item incoming">
+                    <img src="avatar2.jpg" alt="">
+                    <div class="call-info">
+                        <span></span>
+                        <span class="call-status"></span>
+                    </div>
+                    <span class="call-time"></span>
+                </li>
+                <li class="call-item outgoing">
+                    <img src="avatar3.jpg" alt="">
+                    <div class="call-info">
+                        <span></span>
+                        <span class="call-status"></span>
+                    </div>
+                    <span class="call-time"></span>
+                </li>
+                <!-- Más elementos de la lista -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

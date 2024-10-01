@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Contacto</title>
+    <link rel="stylesheet" href="informacion.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar (Lista de contactos/chats) -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="avatar.png" alt="User Avatar">
+                <h2>Mi chat</h2>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar o iniciar un nuevo chat">
+            </div>
+            <div class="chats-list">
+                <div class="chat" onclick="showContactDetails()">
+                    <img src="avatar.png" alt="Chat Avatar">
+                    <div class="chat-info">
+                        <h3>Contacto 1</h3>
+                        <p>Último mensaje...</p>
+                    </div>
+                </div>
+                <div class="chat" onclick="showContactDetails()">
+                    <img src="avatar.png" alt="Chat Avatar">
+                    <div class="chat-info">
+                        <h3>Contacto 2</h3>
+                        <p>Último mensaje...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana de Detalles del Contacto -->
+        <div class="contact-details" id="contactDetails" style="display: none;">
+            <div class="contact-header">
+                <h2>~🥺</h2>
+            </div>
+            <div class="contact-actions">
+                <button class="action-button">🎥 Video</button>
+                <button class="action-button">📞 Audio</button>
+            </div>
+            <div class="contact-info">
+                <p><strong>Hora de últ. vez:</strong> Hoy a las 15:08</p>
+                <p><strong>Info:</strong> 💔😔</p>
+                <p><strong>Número de teléfono:</strong> +503 </p>
+                <p><strong>Mensajes temporales:</strong> Desactivados</p>
+            </div>
+            <div class="notification-settings">
+                <label for="notification-tone">Tono de notificación</label>
+                <select id="notification-tone">
+                    <option>Predeterminado</option>
+                    <!-- Añadir más opciones de tonos aquí -->
+                </select>
+                <button class="silence-button">🔕 Silenciar</button>
+            </div>
+            <div class="contact-footer">
+                <button class="block-button">Bloquear</button>
+                <button class="report-button">Reportar contacto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript para mostrar los detalles del contacto -->
+    <script>
+        function showContactDetails() {
+            document.getElementById('contactDetails').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

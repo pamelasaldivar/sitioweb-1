@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Seguridad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .activity-log {
+            margin-top: 10px;
+        }
+        .activity-log p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Configuración de Seguridad</h1>
+    
+    <div class="section">
+        <h2>Cambiar Contraseña</h2>
+        <label for="current-password">Contraseña Actual:</label>
+        <input type="password" id="current-password" placeholder="Tu contraseña actual">
+        
+        <label for="new-password">Nueva Contraseña:</label>
+        <input type="password" id="new-password" placeholder="Nueva contraseña">
+        
+        <label for="confirm-password">Confirmar Nueva Contraseña:</label>
+        <input type="password" id="confirm-password" placeholder="Confirma tu nueva contraseña">
+
+        <button type="button">Actualizar Contraseña</button>
+    </div>
+
+    <div class="section">
+        <h2>Autenticación de Dos Factores</h2>
+        <label><input type="checkbox" id="2fa"> Habilitar autenticación de dos factores</label>
+        
+        <button type="button">Guardar Cambios</button>
+    </div>
+
+    <div class="section">
+        <h2>Actividad Reciente</h2>
+        <div class="activity-log">
+            <p>Último inicio de sesión: 25 de septiembre de 2024, 10:30 AM</p>
+            <p>Ubicación: Ciudad, País</p>
+            <p>Dispositivo: Escritorio</p>
+            <p>Fecha de la última actualización de la contraseña: 1 de septiembre de 2024</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Ayuda y Soporte</h2>
+        <p>Si tienes problemas de seguridad, contacta a nuestro equipo de soporte.</p>
+    </div>
+</div>
+
+</body>
+</html>

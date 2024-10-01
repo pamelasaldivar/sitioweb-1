@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.call-container {
+    width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #075e54;
+    color: white;
+}
+
+header h2 {
+    margin: 0;
+}
+
+.actions button {
+    background-color: white;
+    color: #075e54;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.create-call-link {
+    padding: 15px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.create-call-link p {
+    margin: 5px 0;
+    color: #075e54;
+    font-weight: bold;
+}
+
+.recent-calls {
+    padding: 10px;
+}
+
+.recent-calls h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.call-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.call-item:hover {
+    background-color: #f1f1f1;
+}
+
+.call-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.call-info {
+    flex: 1;
+}
+
+.call-info span:first-child {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.call-status {
+    font-size: 14px;
+    color: gray;
+}
+
+.call-time {
+    font-size: 14px;
+    color: gray;
+}
+
+.missed-call {
+    color: red;
+    font-weight: bold;
+}
+
+.call-item.missed {
+    border-left: 4px solid red;
+}
+
+.call-item.incoming {
+    border-left: 4px solid green;
+}
+
+.call-item.outgoing {
+    border-left: 4px solid blue;
+}

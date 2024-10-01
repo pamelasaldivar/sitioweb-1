@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Lateral - WhatsApp</title>
+    <link href="barra.html" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            position: fixed;
+        }
+
+        .sidebar h1 {
+            font-size: 20px;
+            color: #25D366;
+            margin: 0 20px;
+        }
+
+        .sidebar img {
+            width: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .menu-item i {
+            font-size: 24px;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .menu-item span {
+            flex-grow: 1;
+        }
+
+        .menu-item .badge {
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .profile-section {
+            margin-top: auto;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .profile-section img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile-section h2 {
+            display: inline-block;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <!-- Logo y título -->
+        <h1>SaldiErick</h1>
+
+        <!-- Opciones de menú -->
+        <div class="menu-item">
+            <i class="material-icons">chat</i>
+            <span>Chats</span>
+            <div class="badge">2</div>
+        </div>
+        <div class="menu-item">
+            <i class="material-icons">call</i>
+            <span>Llamadas</span>
+        </div>
+        <div class="menu-item">
+            <i class="material-icons">donut_large</i>
+            <span>Estados</span>
+        </div>
+
+        <!-- Ajustes y perfil -->
+        <div class="profile-section">
+            <div class="menu-item">
+                <i class="material-icons">settings</i>
+                <span>Ajustes</span>
+            </div>
+            <div class="menu-item">
+                <img src="avatar.png" alt="Avatar de perfil">
+                <h2>Perfil</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

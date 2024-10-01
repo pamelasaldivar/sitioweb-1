@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="olvide.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar sesión</h2>
+        
+        <form action="/login" method="POST">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono" required>
+            
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            
+            <div class="forgot-password-container">
+                <input type="checkbox" id="recordar" name="recordar">
+                <label for="recordar">Olvidé mi contraseña</label>
+            </div>
+            
+            <button type="submit">Acceder</button>
+            
+            <p>No tengo cuenta <a href="/registro">Crear una cuenta</a></p>
+        </form>
+        <script>
+            document.getElementById('loginButton').addEventListener('click', function() {
+                const phone = document.getElementById('phone').value;
+                const password = document.getElementById('password').value;
+    
+                if (phone === '7730 2778' && password === 'alisson14') {  // Ejemplo de validación simple
+                    window.location.href = 'aplicacion.html';  // Redirecciona a la página del chat archivo a invocar era antes "chat.html"
+                } else {
+                    alert('Teléfono o contraseña incorrectos');
+                }
+            });
+        </script>
+    </div> 

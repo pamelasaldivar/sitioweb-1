@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Almacenamiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .file-list {
+            margin-top: 10px;
+        }
+        .file-list p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .storage-info {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interfaz de Almacenamiento</h1>
+    
+    <div class="section">
+        <h2>Subir Archivos</h2>
+        <label for="file-upload">Selecciona un archivo para subir:</label>
+        <input type="file" id="file-upload" multiple>
+        <button type="button">Subir Archivos</button>
+    </div>
+
+    <div class="section">
+        <h2>Archivos Almacenados</h2>
+        <div class="file-list">
+            <p>1. archivo1.pdf</p>
+            <p>2. imagen.jpg</p>
+            <p>3. documento.docx</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Información de Almacenamiento</h2>
+        <p class="storage-info">Capacidad total: 10 GB</p>
+        <p class="storage-info">Espacio utilizado: 4.5 GB</p>
+        <p class="storage-info">Espacio disponible: 5.5 GB</p>
+    </div>
+
+    <div class="section">
+        <h2>Ayuda y Soporte</h2>
+        <p>Si necesitas ayuda, contacta a nuestro equipo de soporte.</p>
+    </div>
+</div>
+
+</body>
+</html>

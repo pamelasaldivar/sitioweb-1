@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Notificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .notifications-container {
+            background-color: white;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .notifications-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .notification-setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .notification-setting label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .notification-setting input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-left: 10px;
+        }
+
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .save-button {
+            padding: 10px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .save-button:hover {
+            background-color: #1ebd58;
+        }
+    </style>
+</head>
+<body>
+
+<div class="notifications-container">
+    <h2>Configuración de Notificaciones</h2>
+
+    <!-- Notificaciones de mensajes -->
+    <div class="notification-setting">
+        <label for="messageNotification">Notificaciones de mensajes</label>
+        <input type="checkbox" id="messageNotification" checked>
+    </div>
+
+    <!-- Sonido de notificación -->
+    <div class="notification-setting">
+        <label for="notificationSound">Sonido de notificación</label>
+        <select id="notificationSound">
+            <option value="default">Predeterminado</option>
+            <option value="beep">Beep</option>
+            <option value="chime">Campana</option>
+            <option value="none">Sin sonido</option>
+        </select>
+    </div>
+
+    <!-- Vibración -->
+    <div class="notification-setting">
+        <label for="vibration">Vibración</label>
+        <input type="checkbox" id="vibration" checked>
+    </div>
+
+    <!-- Notificaciones emergentes -->
+    <div class="notification-setting">
+        <label for="popupNotifications">Notificaciones emergentes</label>
+        <input type="checkbox" id="popupNotifications">
+    </div>
+
+    <!-- Silenciar notificaciones -->
+    <div class="notification-setting">
+        <label for="muteNotifications">Silenciar todas las notificaciones</label>
+        <input type="checkbox" id="muteNotifications">
+    </div>
+
+    <!-- Guardar cambios -->
+    <button class="save-button">Guardar Cambios</button>
+</div>
+
+</body>
+</html>

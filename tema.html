@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Tema y Fondo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Estilos para el tema claro */
+        body.light-theme {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Estilos para el tema oscuro */
+        body.dark-theme {
+            background-color: #181818;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .theme-toggle, .background-settings {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .theme-toggle button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .theme-toggle button:hover {
+            background-color: #1ebd58;
+        }
+
+        .background-settings label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .background-settings input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Fondo personalizado */
+        body.custom-background {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body class="light-theme">
+
+    <div class="container">
+        <h2>Configuración de Tema y Fondo de Pantalla</h2>
+
+        <!-- Cambiar entre tema oscuro y claro -->
+        <div class="theme-toggle">
+            <label>Selecciona un tema:</label>
+            <button id="themeButton">Cambiar a Tema Oscuro</button>
+        </div>
+
+        <!-- Cambiar el fondo de pantalla -->
+        <div class="background-settings">
+            <label>Cambiar el fondo de pantalla:</label>
+            <input type="file" id="backgroundInput" accept="image/*">
+        </div>
+    </div>
+
+    <script>
+        // Cambiar entre tema oscuro y claro
+        const themeButton = document.getElementById('themeButton');
+        const body = document.body;
+
+        themeButton.addEventListener('click', () => {
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeButton.textContent = 'Cambiar a Tema Claro';
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeButton.textContent = 'Cambiar a Tema Oscuro';
+            }
+        });
+
+        // Cambiar el fondo de pantalla
+        const backgroundInput = document.getElementById('backgroundInput');
+
+        backgroundInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    body.style.backgroundImage = `url('${e.target.result}')`;
+                    body.classList.add('custom-background');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
